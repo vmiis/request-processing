@@ -1,0 +1,46 @@
+{
+	"name":"Request Processing",
+	"url":"https://vmiis.github.io/modules/panels/panel.2.html",
+	"parameters":{
+	},
+	"modules":[
+		{
+			"module_id":"purchase_order_request",
+			"table_id":"20009699"
+		}
+		,{
+			"module_id":"purchase_order_approval",
+			"table_id":"20011183"
+		}
+	]
+	,"panel":
+	{
+		"columns":
+		[
+			{
+				"sections":
+				[
+					{
+						"name":"Finance",
+						"modules":
+						[
+							{
+								"module_id":"purchase_order_process",
+								"name":"Purchase order request",
+								"table_id":"20011184",
+								"url":"/modules/finance/purchase_order.html",
+								"counting":"1",
+								"form_module":"purchase_order_request_form"
+							}
+							,{
+								"module_id":"purchase_order_request_form",
+								"table_id":"20011184",
+								"url":"/modules/finance/purchase_order.form.html"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
